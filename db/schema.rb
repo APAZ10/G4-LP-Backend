@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_15_223643) do
+ActiveRecord::Schema.define(version: 2022_01_16_011556) do
 
   create_table "bosques", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "nombre"
@@ -37,6 +37,15 @@ ActiveRecord::Schema.define(version: 2022_01_15_223643) do
     t.index ["bosque_id"], name: "index_likes_on_bosque_id"
   end
 
+  create_table "recorridos", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "bosque_id", null: false
+    t.string "descripcion"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bosque_id"], name: "index_recorridos_on_bosque_id"
+  end
+
   add_foreign_key "grupos", "bosques"
   add_foreign_key "likes", "bosques"
+  add_foreign_key "recorridos", "bosques"
 end

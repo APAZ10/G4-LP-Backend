@@ -11,6 +11,7 @@ module Api
             render json: {status: 'SUCCESS', data:grupo}, status: :ok
         end
 
+        
         def create
             grupo = Grupo.new(grupo_params)
             if grupo.save
