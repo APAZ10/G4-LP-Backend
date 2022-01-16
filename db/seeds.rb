@@ -11,3 +11,13 @@ Bosque.create({
     coords: "-2.0518852425773155,-79.9122328479301",
     zona: "Centro"
 })
+
+Like.create({
+    cantidad: 70,
+    bosque_id: 1
+})
+
+Like.create({
+    cantidad: 50,
+    bosque_id: 2
+})
