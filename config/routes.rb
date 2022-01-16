@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :bosques
     resources :like
     resources :grupo
-    resources :recorridos
+    resources :recorrido
 
   end
 end
