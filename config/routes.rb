@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
     resources :bosques
     resources :like
+    resources :grupo
 
   end
 end

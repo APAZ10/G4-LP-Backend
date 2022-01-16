@@ -21,3 +21,13 @@ Like.create({
     cantidad: 50,
     bosque_id: 2
 })
+
+Grupo.create({
+    bosque_id: 1,
+    img_url: "https://i.postimg.cc/8z3JVd6b/mono-aullador.jpg"
+})
+
+Grupo.create({
+    bosque_id: 2,
+    img_url: "https://i.postimg.cc/KYSGN0TC/Roble.jpg"
+})
