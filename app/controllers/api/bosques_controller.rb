@@ -22,7 +22,7 @@ module Api
 
         private
         def bosque_params
-            params.permit(:nombre, :img_url, :coords, :zona)
+            params.permit(:nombre, :img_url, :coords, :zona, :descripcion, :direccion, :precio)
         end
 
     end
