@@ -2,15 +2,14 @@ module Api
     class RecorridoController < ApplicationController
 
         def index
-            recorrido = Recorrido.order('created_at DESC');
-            render json: {status: 'SUCCESS', data:recorrido}, status: :ok
+            recorridos = Recorrido.order('created_at DESC');
+            render json: {status: 'SUCCESS', data:recorridos}, status: :ok
         end
 
         def show
-            recorrido = Recorrido.where(bosque_id: params[:id])
-            render json: {status: 'SUCCESS', data:recorrido}, status: :ok
+            recorridos = Recorrido.where(bosque_id: params[:id])
+            render json: {status: 'SUCCESS', data:recorridos}, status: :ok
         end
-
         
         def create
             recorrido = Recorrido.new(recorrido_params)
