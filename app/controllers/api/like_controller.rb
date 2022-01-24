@@ -12,8 +12,7 @@ module Api
 
         def update
             like = Like.where(bosque_id:params[:id])
-            cantidad = like_params["cantidad"] + 1
-            like.update(cantidad: cantidad)
+            like.update(cantidad: like_params["cantidad"])
         end
 
         private
